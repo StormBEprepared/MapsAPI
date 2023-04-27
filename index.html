@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <title>Simple Map</title>
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+  </head>
+  <body>
+    <div class="container">
+        <h1 style="color:white;">Enter the origin, destination and as an option the average MPG.<br>Trip from:</h1>
+        <div class="search-container">
+             <input type="text" id="origin-name" 
+            placeholder="Enter origin" value="">
+            <p>to</p>
+            <input type="text" id="destination-name" 
+            placeholder="Enter destination" value="">
+            <p>Average MPG</p>
+            <input type="text" id="fuelConsMPG" 
+            placeholder="Enter vehicle MPG (average)">
+            <button id="search-btn" onclick="calculateDistance()">Search</button>
+        </div>
+
+    <div class="result" id="result"></div>
+
+    <iframe
+    id="harta"
+     width="600"
+    height="450"
+    style="border-radius:20px;"
+    loading="lazy"
+    allowfullscreen
+    referrerpolicy="no-referrer-when-downgrade"
+    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDwf4mpx0OpW5_KDK3ui9b8B6GwVHlR4n4&q=Primaria+Bacau,Bacau+RO">
+    </iframe>
+   
+    <script src="script.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDwf4mpx0OpW5_KDK3ui9b8B6GwVHlR4n4"></script>
+
+  </body>
+</html>
